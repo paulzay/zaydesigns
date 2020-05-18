@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+}
+
+.line {
+  border-right: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.90);
+  font-family: "Poppins";
+  font-size: 3em;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.typing-animation {
+  animation:  blinkCursor 500ms steps(40) 2s infinite normal,
+              typing 4s steps(40) 2s normal both,
+              fadeIn 2s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14.8em;
+  }
+}
+
+@keyframes blinkCursor {
+  
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper-image::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  animation-delay: 2s;
+  animation: ImageOverlayOut 1s 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes ImageOverlayOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

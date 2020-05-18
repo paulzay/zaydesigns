@@ -63,6 +63,8 @@ body{
 .wrapper-image {
   position: relative;
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 .wrapper-image::after {
@@ -70,8 +72,6 @@ body{
   content: '';
   right: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
   background: #000;
   animation-delay: 2s;
   animation: ImageOverlayOut 1s 1s;

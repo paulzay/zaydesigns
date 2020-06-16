@@ -1,23 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
-
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: black;
+  background: #fff;
 }
 
 .line {
   border-right: 2px solid transparent;
-  color: rgba(255, 255, 255, 0.90);
+  color: rgba(255, 255, 255, 0.9);
   font-family: "Poppins";
   font-size: 3em;
   font-weight: 800;
@@ -32,9 +31,8 @@ body{
 }
 
 .typing-animation {
-  animation:  blinkCursor 500ms steps(40) 2s infinite normal,
-              typing 4s steps(40) 2s normal both,
-              fadeIn 2s;
+  animation: blinkCursor 500ms steps(40) 2s infinite normal,
+    typing 4s steps(40) 2s normal both, fadeIn 2s;
 }
 
 @keyframes typing {
@@ -47,7 +45,6 @@ body{
 }
 
 @keyframes blinkCursor {
-  
   from {
     border-right-color: rgba(255, 255, 255, 0.75);
   }
@@ -61,6 +58,7 @@ body{
 }
 
 .wrapper-image {
+  background: url("/assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
   position: relative;
   overflow: hidden;
   width: 100vw;
@@ -69,7 +67,7 @@ body{
 
 .wrapper-image::after {
   position: absolute;
-  content: '';
+  content: "";
   right: 0;
   top: 0;
   background: #000;

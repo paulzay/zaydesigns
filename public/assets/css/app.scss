@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
 
+// VARIABLE
+
+$c1: #e4f5ff;
+$c2: #96c7d5;
+$c3: #2d7a9c;
+$c4: #094f6e;
+$c5: #022534;
+
+// STYLES
 * {
   margin: 0;
   padding: 0;
@@ -58,7 +67,7 @@ body {
 }
 
 .wrapper-image {
-  background: url("/assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
+  background: url("../../assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
   position: relative;
   overflow: hidden;
   width: 100vw;

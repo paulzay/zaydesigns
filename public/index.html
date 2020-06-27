@@ -6,48 +6,68 @@
     <title>Zay Designs</title>
     <link rel="stylesheet" href="./assets/css/app.css" />
   </head>
+
   <body>
-    <!-- <header>
+    <header id="home">
       <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+        <i class="fa fa-bars"></i>
       </div>
 
       <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait"></div>
-        </div>
-        <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link">
+        <ul class="navlinks">
+          <!-- <li>
+            <codersrank-widget
+              class="my-widget"
+              username="paulzay"
+              layout="horizontal"
+              badges="2"
+            ></codersrank-widget>
+          </li> -->
+          <li class="nav-item">
+            <a href="#home" class="nav-link">
               Home
             </a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link">
+            <a href="#blog" class="nav-link">
+              Blog
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">
               About Me
             </a>
           </li>
           <li class="nav-item">
-            <a href="work.html" class="nav-link">
+            <a href="#work" class="nav-link">
               My Work
             </a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link">
+            <a href="#contact" class="nav-link">
               Get In Touch
             </a>
           </li>
         </ul>
       </nav>
-    </header> -->
-    <div class="wrapper">
-      <div class="wrapper-image">
-        <!-- <img src="./assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg"> -->
-      </div>
-
-      <p class="line typing-animation">Hi, my name is Paul Zay.</p>
+    </header>
+    <div class="hero">
+      <h1>
+        <a
+          href=""
+          class="typewrite"
+          data-period="2000"
+          data-type='[ "Hello, my name is Paul.", "You can call me Zay", "I am a problem solver.", "Programming is my philosophers stone ." ]'
+        >
+          <span class="wrap"></span>
+        </a>
+      </h1>
     </div>
+    <footer></footer>
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <script src="../app.js"></script>
+    <script src="https://profile.codersrank.io/widget/widget.js"></script>
   </body>
 </html>

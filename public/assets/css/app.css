@@ -1,130 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
 * {
   margin: 0;
   padding: 0;
 }
 
+* a {
+  color: #fff;
+  text-decoration: none;
+}
+
+* li {
+  list-style: none;
+}
+
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100vh;
-  background: #fff;
-}
-
-.line {
-  border-right: 2px solid transparent;
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
   font-family: "Poppins";
-  font-size: 3em;
-  font-weight: 800;
   text-align: center;
-  margin: 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
-.typing-animation {
-  -webkit-animation: blinkCursor 500ms steps(40) 2s infinite normal, typing 4s steps(40) 2s normal both, fadeIn 2s;
-          animation: blinkCursor 500ms steps(40) 2s infinite normal, typing 4s steps(40) 2s normal both, fadeIn 2s;
+nav {
+  background-color: #022534;
 }
 
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 14.8em;
-  }
+nav .menu-btn {
+  font-size: 1.5rem;
+  color: var(--clr-grey-1);
+  background: transparent;
+  border-color: transparent;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 14.8em;
-  }
+nav .menu-btn:hover {
+  color: var(--clr-secondary);
 }
 
-@-webkit-keyframes blinkCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
+nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 20px;
+  padding: 30px auto;
 }
 
-@keyframes blinkCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
+nav ul a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.wrapper {
-  position: relative;
+nav ul a:active {
+  background-color: #fff;
+  color: #022534;
 }
 
-.wrapper-image {
+nav ul a:hover {
+  text-decoration: underline;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hero {
   background: url("../../assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
 }
 
-.wrapper-image::after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  background: #000;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation: ImageOverlayOut 1s 1s;
-          animation: ImageOverlayOut 1s 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-@-webkit-keyframes ImageOverlayOut {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
-@keyframes ImageOverlayOut {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
+.hero .typewrite {
+  color: #fff;
+  font-family: "Anonymous Pro", monospace;
 }
 /*# sourceMappingURL=app.css.map */

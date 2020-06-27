@@ -1,95 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
 
-// VARIABLE
+// VARIABLES
 
 $c1: #e4f5ff;
 $c2: #96c7d5;
 $c3: #2d7a9c;
 $c4: #094f6e;
 $c5: #022534;
+$w: #fff;
 
 // STYLES
-* {
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+* a {
+  color: $w;
+  text-decoration: none;
+}
+
+* li {
+  list-style: none;
+}
+
 body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  background: #fff;
-}
-
-.line {
-  border-right: 2px solid transparent;
-  color: rgba(255, 255, 255, 0.9);
+  color: $w;
   font-family: "Poppins";
-  font-size: 3em;
-  font-weight: 800;
   text-align: center;
-  margin: 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.typing-animation {
-  animation: blinkCursor 500ms steps(40) 2s infinite normal,
-    typing 4s steps(40) 2s normal both, fadeIn 2s;
-}
+nav {
+  background-color: $c5;
 
-@keyframes typing {
-  from {
-    width: 0;
+  .menu-btn {
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    &:hover {
+      color: var(--clr-secondary);
+    }
   }
-  to {
-    width: 14.8em;
+  ul {
+    display: inline-flex;
+    margin: 20px;
+    padding: 30px auto;
+
+    a {
+      color: $w;
+      text-decoration: none;
+      &:active {
+        background-color: $w;
+        color: $c5;
+      }
+      &:hover {
+        text-decoration: underline;
+        transition: 0.5s;
+      }
+    }
   }
 }
 
-@keyframes blinkCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-
-.wrapper {
-  position: relative;
-}
-
-.wrapper-image {
+.hero {
   background: url("../../assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-}
 
-.wrapper-image::after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  background: #000;
-  animation-delay: 2s;
-  animation: ImageOverlayOut 1s 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes ImageOverlayOut {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
+  .typewrite {
+    color: $w;
+    font-family: "Anonymous Pro", monospace;
   }
 }

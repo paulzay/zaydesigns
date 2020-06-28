@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
-* {
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -18,24 +26,26 @@ body {
   color: #fff;
   font-family: "Poppins";
   text-align: center;
+  line-height: 1.5;
+  font-size: 0.875rem;
 }
 
 nav {
-  background-color: #022534;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
-nav .menu-btn {
-  font-size: 1.5rem;
-  color: var(--clr-grey-1);
-  background: transparent;
-  border-color: transparent;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-nav .menu-btn:hover {
-  color: var(--clr-secondary);
+nav img {
+  width: 3rem;
+  margin-left: 30px;
 }
 
 nav ul {
@@ -47,19 +57,26 @@ nav ul {
 }
 
 nav ul a {
-  color: #fff;
+  color: #022534;
   text-decoration: none;
+  background: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  display: block;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  padding: 0.75rem 0;
 }
 
 nav ul a:active {
-  background-color: #fff;
-  color: #022534;
+  color: #2d7a9c;
 }
 
 nav ul a:hover {
   text-decoration: underline;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .hero {

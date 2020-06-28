@@ -37,21 +37,19 @@ body {
   color: $w;
   font-family: "Poppins";
   text-align: center;
+  line-height: 1.5;
+  font-size: 0.875rem;
 }
 
 nav {
-  background-color: $c5;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 
-  .menu-btn {
-    font-size: 1.5rem;
-    color: var(--clr-grey-1);
-    background: transparent;
-    border-color: transparent;
-    transition: var(--transition);
-    cursor: pointer;
-    &:hover {
-      color: var(--clr-secondary);
-    }
+  img {
+    width: 3rem;
+    margin-left: 30px;
   }
   ul {
     display: inline-flex;
@@ -59,15 +57,22 @@ nav {
     padding: 30px auto;
 
     a {
-      color: $w;
+      color: $c5;
       text-decoration: none;
+      background: $w;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25rem;
+      display: block;
+      transition: all 0.3s linear;
+      padding: 0.75rem 0;
+
       &:active {
-        background-color: $w;
-        color: $c5;
+        color: $c3;
       }
       &:hover {
         text-decoration: underline;
-        transition: 0.5s;
+        transition: all 0.5s;
       }
     }
   }

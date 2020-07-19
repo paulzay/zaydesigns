@@ -61,7 +61,7 @@ nav ul {
 }
 
 nav ul a {
-  color: #022534;
+  color: #e4f5ff;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
@@ -106,5 +106,78 @@ header {
   background: var(--clr-white);
   -webkit-box-shadow: var(--light-shadow);
           box-shadow: var(--light-shadow);
+}
+
+/* sections and title */
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #022534;
+}
+
+.title span {
+  color: var(--clr-secondary);
+}
+
+#about,
+#work,
+#blog,
+#contact {
+  min-height: 100vh;
+  padding-top: 30px;
+}
+
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--clr-secondary);
+  width: 2rem;
+  height: 2rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  -webkit-animation: bounce 2s ease-in-out infinite;
+          animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=app.css.map */

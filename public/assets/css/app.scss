@@ -25,8 +25,8 @@ html {
 }
 
 * a {
-  color: $w;
   text-decoration: none;
+  color: $w;
 }
 
 * li {
@@ -43,40 +43,100 @@ body {
 .menu {
   display: none;
 }
+
 nav {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  background: $w;
+  padding: 1rem 1.5rem;
 
-  .logo {
-    margin-left: 30px;
-    width: 3rem;
-  }
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $w;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
-  ul {
-    display: inline-flex;
-    margin: 20px;
-    padding: 30px auto;
-
-    a {
-      color: $c1;
+    .links a {
+      color: $c5;
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.25rem;
       transition: all 0.3s linear;
+      font-weight: bold;
       padding: 0.75rem 0;
-
-      &:active {
-        color: $c3;
-      }
       &:hover {
-        text-decoration: underline;
-        transition: all 0.5s;
+        color: $c3;
       }
     }
   }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-toggle {
+      font-size: 1.5rem;
+      color: green;
+      background: transparent;
+      border-color: transparent;
+      // transition: var(--transition);
+      cursor: pointer;
+      &:hover {
+        color: red;
+      }
+    }
+    .logo {
+      width: 3rem;
+    }
+    .links-container {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+    }
+  }
 }
+
+@media screen and (min-width: 800px) {
+  nav {
+    background: transparent;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: $w;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    display: block;
+    transition: all 0.3s linear;
+    margin: 0 1rem;
+    padding: 0;
+  }
+  .links a:hover {
+    color: $c4;
+    text-decoration: none;
+  }
+}
+
 header {
   min-height: 100vh;
   background: url(../nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg) center/cover
@@ -84,26 +144,19 @@ header {
 }
 .banner {
   min-height: 100vh;
-  // display: grid;
-  // place-items: center;
-  // text-align: center;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
-.hero {
-  background: url("../../assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
+// .hero {
+//   background: url("../../assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
 
-  .typewrite {
-    color: $w;
-    font-family: "Anonymous Pro", monospace;
-  }
-}
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--clr-white);
-  box-shadow: var(--light-shadow);
-}
+//   .typewrite {
+//     color: $w;
+//     font-family: "Anonymous Pro", monospace;
+//   }
+// }
+
 /* sections and title */
 .title h2 {
   text-align: center;
@@ -111,40 +164,39 @@ header {
   color: $c5;
 }
 .title span {
-  color: var(--clr-secondary);
+  color: $c4;
 }
 #about,
 #work,
-#blog,
 #contact {
   min-height: 100vh;
   padding-top: 30px;
 }
 
-// footer {
-//   background: var(--clr-grey-1);
-//   padding: 5rem 1rem;
-// }
-// footer p {
-//   color: var(--clr-white);
-//   text-align: center;
-//   text-transform: capitalize;
-//   letter-spacing: var(--spacing);
-//   margin-bottom: 0;
-// }
+footer {
+  background: $c1;
+  padding: 5rem 1rem;
+}
+footer p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+  margin-bottom: 0;
+}
 
 .top-link {
   font-size: 1.25rem;
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--clr-secondary);
+  background: $c4;
   width: 2rem;
   height: 2rem;
   display: grid;
   place-items: center;
-  border-radius: var(--radius);
-  color: var(--clr-white);
+  border-radius: 3px;
+  color: $w;
   animation: bounce 2s ease-in-out infinite;
 
   visibility: hidden;

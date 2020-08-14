@@ -6,6 +6,10 @@
     <title>Zay Designs</title>
     <link
       rel="stylesheet"
+      href="./../fontawesome-free-5.12.0-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
@@ -23,67 +27,42 @@
 
   <body>
     <header id="home">
-      <!-- <div class="menu-btn">
-        <i class="fa fa-bars"></i>
-      </div> -->
-
-      <nav>
-        <div class="mini-nav">
-          <img src="../public/assets/zdlogo.svg" alt="logo" class="logo" />
-          <button class="menu">
-            <i class="fas fa-bars"></i>
-          </button>
+      <nav id="nav">
+        <div class="nav-center">
+          <div class="nav-header">
+            <img src="../public/assets/zdlogo.svg" alt="logo" class="logo" />
+            <button class="nav-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a href="#work" class="scroll-link">
+                  My Work
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="scroll-link">
+                  Get In Touch
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="navlinks">
-          <!-- <li>
-            <codersrank-widget
-              class="my-widget"
-              username="paulzay"
-              layout="horizontal"
-              badges="2"
-            ></codersrank-widget>
-          </li> -->
-
-          <li class="nav-item">
-            <a href="#home" class="nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#blog" class="nav-link">
-              Blog
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">
-              About Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#work" class="nav-link">
-              My Work
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">
-              Get In Touch
-            </a>
-          </li>
-        </ul>
       </nav>
       <div class="banner">
-        <div class="container">
-          <h1>
-            <a
-              href=""
-              class="typewrite"
-              data-period="2000"
-              data-type='[ "Hello, my name is Paul.", "You can call me Zay", "I am a fullstack software developer", "Programming is my philosophers stone." ]'
-            >
-              <span class="wrap"></span>
-            </a>
-          </h1>
-        </div>
+        <div class="container"></div>
       </div>
     </header>
     <!-- <div class="hero">
@@ -115,21 +94,19 @@
         <h2>my <span>works</span></h2>
       </div>
     </section>
-    <section id="blog" class="section">
-      <div class="title">
-        <h2>blog</h2>
-      </div>
-    </section>
     <section id="contact" class="section">
       <div class="title">
         <h2>Get in touch</h2>
       </div>
     </section>
-    <footer></footer>
+    <footer class="section">
+      <p>&copy; Paul Ogolla <span class="date"></span>. all rights reserved</p>
+    </footer>
     <a href="#home" class="scroll-link top-link">
       <i class="fas fa-arrow-up"></i>
     </a>
-    <script src="../app.js"></script>
+    <!-- javascript -->
+    <script src="app.js"></script>
     <script src="https://profile.codersrank.io/widget/widget.js"></script>
   </body>
 </html>

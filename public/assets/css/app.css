@@ -14,8 +14,8 @@ html {
 }
 
 * a {
-  color: #fff;
   text-decoration: none;
+  color: #fff;
 }
 
 * li {
@@ -35,49 +35,118 @@ body {
 }
 
 nav {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  background: #fff;
+  padding: 1rem 1.5rem;
+}
+
+nav .fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-nav .logo {
-  margin-left: 30px;
-  width: 3rem;
-}
-
-nav ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 20px;
-  padding: 30px auto;
-}
-
-nav ul a {
-  color: #e4f5ff;
+nav .fixed-nav .links a {
+  color: #022534;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  font-weight: bold;
   padding: 0.75rem 0;
 }
 
-nav ul a:active {
+nav .fixed-nav .links a:hover {
   color: #2d7a9c;
 }
 
-nav ul a:hover {
-  text-decoration: underline;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+nav .nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav-header .nav-toggle {
+  font-size: 1.5rem;
+  color: green;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+nav .nav-header .nav-toggle:hover {
+  color: red;
+}
+
+nav .nav-header .logo {
+  width: 3rem;
+}
+
+nav .nav-header .links-container {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    background: transparent;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto;
+  }
+  .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    display: block;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    margin: 0 1rem;
+    padding: 0;
+  }
+  .links a:hover {
+    color: #094f6e;
+    text-decoration: none;
+  }
 }
 
 header {
@@ -87,25 +156,10 @@ header {
 
 .banner {
   min-height: 100vh;
-}
-
-.hero {
-  background: url("../../assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
-}
-
-.hero .typewrite {
-  color: #fff;
-  font-family: "Anonymous Pro", monospace;
-}
-
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--clr-white);
-  -webkit-box-shadow: var(--light-shadow);
-          box-shadow: var(--light-shadow);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
 /* sections and title */
@@ -116,15 +170,27 @@ header {
 }
 
 .title span {
-  color: var(--clr-secondary);
+  color: #094f6e;
 }
 
 #about,
 #work,
-#blog,
 #contact {
   min-height: 100vh;
   padding-top: 30px;
+}
+
+footer {
+  background: #e4f5ff;
+  padding: 5rem 1rem;
+}
+
+footer p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+  margin-bottom: 0;
 }
 
 .top-link {
@@ -132,14 +198,14 @@ header {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--clr-secondary);
+  background: #094f6e;
   width: 2rem;
   height: 2rem;
   display: -ms-grid;
   display: grid;
   place-items: center;
-  border-radius: var(--radius);
-  color: var(--clr-white);
+  border-radius: 3px;
+  color: #fff;
   -webkit-animation: bounce 2s ease-in-out infinite;
           animation: bounce 2s ease-in-out infinite;
   visibility: hidden;

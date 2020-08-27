@@ -9,6 +9,7 @@ $c3: #2d7a9c;
 $c4: #094f6e;
 $c5: #022534;
 $w: #fff;
+$b: #000;
 
 // STYLES
 
@@ -39,6 +40,8 @@ body {
   text-align: center;
   line-height: 1.5;
   font-size: 0.875rem;
+  background-color: $w;
+  max-width: 1440px;
 }
 .menu {
   display: none;
@@ -136,7 +139,75 @@ nav {
     text-decoration: none;
   }
 }
-
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+@media screen and (max-width: 550px) {
+  .banner {
+    .container {
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .text {
+      width: 100% !important;
+      h2 {
+        font-size: 40px !important;
+      }
+      p {
+        font-size: 16px !important;
+      }
+    }
+    form {
+      width: 100% !important;
+    }
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    .texts {
+      width: 100% !important;
+      margin-bottom: 30px;
+      h2 {
+        font-size: 40px !important;
+      }
+      p {
+        font-size: 16px !important;
+      }
+    }
+  }
+}
 header {
   min-height: 100vh;
   background: url(../nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg) center/cover
@@ -147,6 +218,21 @@ header {
   display: grid;
   place-items: center;
   text-align: center;
+  h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 81px;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 // .hero {
 //   background: url("../../assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg");
@@ -157,7 +243,6 @@ header {
 //   }
 // }
 
-/* sections and title */
 .title h2 {
   text-align: center;
   text-transform: uppercase;
@@ -166,25 +251,146 @@ header {
 .title span {
   color: $c4;
 }
-#about,
-#work,
-#contact {
-  min-height: 100vh;
-  padding-top: 30px;
+
+#work {
+  min-width: 90vh;
+}
+.about {
+  background-color: $w;
+  color: $b;
+  padding: 30px 6vw;
+  margin: 40px 0;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  .texts {
+    .logos {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      img {
+        height: 40px;
+        margin-right: 20px;
+      }
+    }
+    width: 50%;
+    padding: auto 30px;
+    h2 {
+      font-size: 60px;
+    }
+    p {
+      line-height: 1.8em;
+      font-size: 18px;
+      margin-top: 20px;
+      a {
+        color: $c5;
+      }
+    }
+  }
+  .right {
+    img {
+      border-radius: 50%;
+    }
+  }
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  min-height: 90vh;
+  padding: 30px 6vw;
+  .text {
+    width: 50%;
+
+    p {
+      color: $c5;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+    h2 {
+      color: $b;
+      font-size: 60px;
+      margin-top: 30%;
+    }
+  }
+  form {
+    width: 50%;
+    height: auto;
+    border: 0;
+    background: white;
+    font-size: large;
+    font-weight: 200;
+    margin-top: 1em;
+    color: $c5;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    label {
+      align-self: flex-start;
+      margin-bottom: 5px;
+    }
+    input {
+      border: 0;
+      border-bottom: 1px solid $b;
+    }
+    input[type="submit"] {
+      background-color: red;
+      border: 0;
+      margin-top: 30px;
+      padding: 20px;
+      color: $w;
+    }
+  }
+}
+.custom-shape-divider-top-1598543374 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
+// .custom-shape-divider-top-1598543374 svg {
+//   position: relative;
+//   display: block;
+//   width: calc(100% + 1.3px);
+//   height: 150px;
+//   transform: rotateY(180deg);
+// }
+
+// .custom-shape-divider-top-1598543374 .shape-fill {
+//   fill: #000;
+// }
+// .custom-shape-divider-top-1598543374 svg {
+//   position: relative;
+//   display: block;
+//   width: calc(100% + 1.3px);
+// }
+
 footer {
-  background: $c1;
-  padding: 5rem 1rem;
+  background-image: url(../wavesOpacity.svg);
+  background-color: $c5;
+  position: relative;
+  height: 210px;
+  padding: 5em 1rem;
 }
 footer p {
+  margin-top: 40px;
   color: var(--clr-white);
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 0.25rem;
   margin-bottom: 0;
 }
-
+.socials ul li {
+  display: inline-flex;
+  margin-right: 25px;
+  a {
+    font-size: 2em;
+    color: $w;
+    margin-top: 30px;
+  }
+}
 .top-link {
   font-size: 1.25rem;
   position: fixed;
@@ -216,5 +422,234 @@ footer p {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+// animate projects
+/* Reset */
+@import url(//codepen.io/chrisdothtml/pen/ojLzJK.css);
+
+// variables
+$anim-speed: 0.3s;
+
+// main styles
+.tiles {
+  // width: 1040px;
+  font-size: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  // text-align: center;
+  // align-items: center;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+
+  .tile {
+    display: inline-block;
+    margin: 10px;
+    text-align: left;
+    opacity: 0.99;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+
+    &:before {
+      content: "";
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+      width: 100%;
+      height: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 2;
+      transition-property: top, opacity;
+      transition-duration: $anim-speed;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .details {
+      font-size: 16px;
+      padding: 20px;
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+
+      span {
+        display: block;
+        opacity: 0;
+        position: relative;
+        top: 100px;
+        transition-property: top, opacity;
+        transition-duration: $anim-speed;
+        transition-delay: 0s;
+      }
+
+      .title {
+        line-height: 1;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .info {
+        line-height: 1.2;
+        margin-top: 5px;
+        font-size: 12px;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      &:before,
+      span {
+        opacity: 1;
+      }
+
+      &:before {
+        top: 50%;
+      }
+
+      span {
+        top: 0;
+      }
+
+      .title {
+        transition-delay: 0.15s;
+      }
+
+      .info {
+        transition-delay: 0.25s;
+      }
+    }
+  }
+}
+
+/*********************** Demo - 15 *******************/
+.box15 {
+  position: relative;
+}
+.box15 img {
+  width: 100%;
+  height: auto;
+}
+.box15 .box-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+.box15:hover .box-content {
+  background-color: rgba(255, 242, 242, 0.8);
+}
+.box15 .box-content:after,
+.box15 .box-content:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.6s ease 0.3s;
+}
+.box15 .box-content:before {
+  border-left: 1px solid #040404;
+  border-top: 1px solid #040404;
+  top: 19px;
+  left: 19px;
+}
+.box15 .box-content:after {
+  border-bottom: 1px solid #040404;
+  border-right: 1px solid #040404;
+  bottom: 19px;
+  right: 19px;
+}
+.box15:hover .box-content:after,
+.box15:hover .box-content:before {
+  opacity: 1;
+  transform: scale(1);
+}
+.box15 .title {
+  font-size: 22px;
+  color: #000;
+  margin: 0;
+  position: relative;
+  top: 0;
+  opacity: 0;
+  transition: all 1s ease 10ms;
+}
+.box15:hover .title {
+  top: 39%;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(1, -0.53, 0.405, 1.425) 10ms;
+}
+.box15 .title:after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #040404;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: all 1s ease 0s;
+}
+.box15:hover .title:after {
+  width: 80%;
+  transition: all 1s ease 0.8s;
+}
+.box15 .icon {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(1, -0.53, 0.405, 1.425);
+  transition-delay: 0.1s;
+}
+.box15:hover .icon {
+  bottom: 39%;
+  opacity: 1;
+}
+.box15 .icon li {
+  display: inline-block;
+}
+.box15 .icon li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #000;
+  border: 1px solid #000;
+  margin-right: 5px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.box15 .icon li a:hover {
+  background: #000;
+  color: #fff;
+}
+@media only screen and (max-width: 990px) {
+  .box15 {
+    margin-bottom: 30px;
   }
 }

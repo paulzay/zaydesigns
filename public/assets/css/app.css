@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
+@import url(//codepen.io/chrisdothtml/pen/ojLzJK.css);
 html {
   scroll-behavior: smooth;
 }
@@ -28,6 +29,8 @@ body {
   text-align: center;
   line-height: 1.5;
   font-size: 0.875rem;
+  background-color: #fff;
+  max-width: 1440px;
 }
 
 .menu {
@@ -149,6 +152,83 @@ nav .nav-header .links-container {
   }
 }
 
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .banner .container h1 {
+    font-size: 40px;
+  }
+  .banner .container h2 {
+    font-size: 30px;
+  }
+  .banner .container p {
+    font-size: 18px;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .contact .text {
+    width: 100% !important;
+  }
+  .contact .text h2 {
+    font-size: 40px !important;
+  }
+  .contact .text p {
+    font-size: 16px !important;
+  }
+  .contact form {
+    width: 100% !important;
+  }
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about .texts {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+  .about .texts h2 {
+    font-size: 40px !important;
+  }
+  .about .texts p {
+    font-size: 16px !important;
+  }
+}
+
 header {
   min-height: 100vh;
   background: url(../nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg) center/cover no-repeat;
@@ -162,7 +242,24 @@ header {
   text-align: center;
 }
 
-/* sections and title */
+.banner h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 81px;
+}
+
+.banner h2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.banner p {
+  font-size: 20px;
+  line-height: 32px;
+}
+
 .title h2 {
   text-align: center;
   text-transform: uppercase;
@@ -173,24 +270,164 @@ header {
   color: #094f6e;
 }
 
-#about,
-#work,
-#contact {
-  min-height: 100vh;
-  padding-top: 30px;
+#work {
+  min-width: 90vh;
+}
+
+.about {
+  background-color: #fff;
+  color: #000;
+  padding: 30px 6vw;
+  margin: 40px 0;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .texts {
+  width: 50%;
+  padding: auto 30px;
+}
+
+.about .texts .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+.about .texts .logos img {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.about .texts h2 {
+  font-size: 60px;
+}
+
+.about .texts p {
+  line-height: 1.8em;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.about .texts p a {
+  color: #022534;
+}
+
+.about .right img {
+  border-radius: 50%;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 90vh;
+  padding: 30px 6vw;
+}
+
+.contact .text {
+  width: 50%;
+}
+
+.contact .text p {
+  color: #022534;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.contact .text h2 {
+  color: #000;
+  font-size: 60px;
+  margin-top: 30%;
+}
+
+.contact form {
+  width: 50%;
+  height: auto;
+  border: 0;
+  background: white;
+  font-size: large;
+  font-weight: 200;
+  margin-top: 1em;
+  color: #022534;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact form label {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 5px;
+}
+
+.contact form input {
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+
+.contact form input[type="submit"] {
+  background-color: red;
+  border: 0;
+  margin-top: 30px;
+  padding: 20px;
+  color: #fff;
+}
+
+.custom-shape-divider-top-1598543374 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 footer {
-  background: #e4f5ff;
-  padding: 5rem 1rem;
+  background-image: url(../wavesOpacity.svg);
+  background-color: #022534;
+  position: relative;
+  height: 210px;
+  padding: 5em 1rem;
 }
 
 footer p {
+  margin-top: 40px;
   color: var(--clr-white);
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 0.25rem;
   margin-bottom: 0;
+}
+
+.socials ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 25px;
+}
+
+.socials ul li a {
+  font-size: 2em;
+  color: #fff;
+  margin-top: 30px;
 }
 
 .top-link {
@@ -244,6 +481,256 @@ footer p {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+/* Reset */
+.tiles {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+.tiles .tile {
+  display: inline-block;
+  margin: 10px;
+  text-align: left;
+  opacity: 0.99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tiles .tile:before {
+  content: "";
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.tiles .tile img {
+  display: block;
+  max-width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.tiles .tile .details {
+  font-size: 16px;
+  padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.tiles .tile .details span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.tiles .tile .details .title {
+  line-height: 1;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.tiles .tile .details .info {
+  line-height: 1.2;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.tiles .tile:focus:before,
+.tiles .tile:focus span, .tiles .tile:hover:before,
+.tiles .tile:hover span {
+  opacity: 1;
+}
+
+.tiles .tile:focus:before, .tiles .tile:hover:before {
+  top: 50%;
+}
+
+.tiles .tile:focus span, .tiles .tile:hover span {
+  top: 0;
+}
+
+.tiles .tile:focus .title, .tiles .tile:hover .title {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.tiles .tile:focus .info, .tiles .tile:hover .info {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+/*********************** Demo - 15 *******************/
+.box15 {
+  position: relative;
+}
+
+.box15 img {
+  width: 100%;
+  height: auto;
+}
+
+.box15 .box-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.box15:hover .box-content {
+  background-color: rgba(255, 242, 242, 0.8);
+}
+
+.box15 .box-content:after,
+.box15 .box-content:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.6s ease 0.3s;
+  transition: all 0.6s ease 0.3s;
+}
+
+.box15 .box-content:before {
+  border-left: 1px solid #040404;
+  border-top: 1px solid #040404;
+  top: 19px;
+  left: 19px;
+}
+
+.box15 .box-content:after {
+  border-bottom: 1px solid #040404;
+  border-right: 1px solid #040404;
+  bottom: 19px;
+  right: 19px;
+}
+
+.box15:hover .box-content:after,
+.box15:hover .box-content:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.box15 .title {
+  font-size: 22px;
+  color: #000;
+  margin: 0;
+  position: relative;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all 1s ease 10ms;
+  transition: all 1s ease 10ms;
+}
+
+.box15:hover .title {
+  top: 39%;
+  opacity: 1;
+  -webkit-transition: all 0.5s cubic-bezier(1, -0.53, 0.405, 1.425) 10ms;
+  transition: all 0.5s cubic-bezier(1, -0.53, 0.405, 1.425) 10ms;
+}
+
+.box15 .title:after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #040404;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.box15:hover .title:after {
+  width: 80%;
+  -webkit-transition: all 1s ease 0.8s;
+  transition: all 1s ease 0.8s;
+}
+
+.box15 .icon {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-timing-function: cubic-bezier(1, -0.53, 0.405, 1.425);
+          transition-timing-function: cubic-bezier(1, -0.53, 0.405, 1.425);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.box15:hover .icon {
+  bottom: 39%;
+  opacity: 1;
+}
+
+.box15 .icon li {
+  display: inline-block;
+}
+
+.box15 .icon li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #000;
+  border: 1px solid #000;
+  margin-right: 5px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.box15 .icon li a:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media only screen and (max-width: 990px) {
+  .box15 {
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=app.css.map */

@@ -33,16 +33,14 @@ body {
   max-width: 1440px;
 }
 
-.menu {
-  display: none;
-}
-
+/* navbar */
 nav {
   background: #fff;
   padding: 1rem 1.5rem;
 }
 
-nav .fixed-nav {
+/* fixed nav */
+.fixed-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -50,24 +48,31 @@ nav .fixed-nav {
   background: #fff;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-nav .fixed-nav .links a {
+.fixed-nav .links a {
   color: #022534;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  font-weight: bold;
   padding: 0.75rem 0;
 }
 
-nav .fixed-nav .links a:hover {
+.fixed-nav .links a:hover {
   color: #2d7a9c;
 }
 
-nav .nav-header {
+.fixed-nav .links a:hover {
+  color: #f55800;
+}
+
+/* .fixed-nav .links-container {
+  height: auto !important;
+} */
+.nav-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,27 +84,50 @@ nav .nav-header {
           justify-content: space-between;
 }
 
-nav .nav-header .nav-toggle {
+.nav-toggle {
   font-size: 1.5rem;
-  color: green;
+  color: #f55800;
   background: transparent;
   border-color: transparent;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   cursor: pointer;
 }
 
-nav .nav-header .nav-toggle:hover {
-  color: red;
+.nav-toggle:hover {
+  color: #000;
 }
 
-nav .nav-header .logo {
-  width: 3rem;
+.logo {
+  height: 30px;
 }
 
-nav .nav-header .links-container {
+.links-container {
   height: 0;
   overflow: hidden;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+
+.show-links {
+  height: 200px;
+}
+
+.links a {
+  background: #fff;
+  color: var(--clr-grey-5);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  display: block;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.links a:hover {
+  color: #f55800;
 }
 
 @media screen and (min-width: 800px) {
@@ -127,7 +155,7 @@ nav .nav-header .links-container {
     display: none;
   }
   .links-container {
-    height: auto;
+    height: auto !important;
   }
   .links {
     display: -webkit-box;
@@ -152,28 +180,8 @@ nav .nav-header .links-container {
   }
 }
 
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
+.links a:hover {
+  color: var(--clr-white);
 }
 
 @media screen and (max-width: 550px) {
@@ -271,7 +279,7 @@ header {
 }
 
 #work {
-  min-width: 90vh;
+  min-height: 90vh;
 }
 
 .about {
@@ -310,6 +318,7 @@ header {
 
 .about .texts h2 {
   font-size: 60px;
+  color: #f55800;
 }
 
 .about .texts p {
@@ -348,7 +357,7 @@ header {
 }
 
 .contact .text h2 {
-  color: #000;
+  color: #f55800;
   font-size: 60px;
   margin-top: 30%;
 }
@@ -384,11 +393,17 @@ header {
 }
 
 .contact form input[type="submit"] {
-  background-color: red;
+  background-color: #f55800;
   border: 0;
   margin-top: 30px;
   padding: 20px;
   color: #fff;
+}
+
+.contact form input[type="submit"]:hover {
+  background-color: #fff;
+  color: #f55800;
+  border: 1px solid #f55800;
 }
 
 .custom-shape-divider-top-1598543374 {
@@ -402,7 +417,7 @@ header {
 
 footer {
   background-image: url(../wavesOpacity.svg);
-  background-color: #022534;
+  background-color: #262626;
   position: relative;
   height: 210px;
   padding: 5em 1rem;
@@ -410,7 +425,7 @@ footer {
 
 footer p {
   margin-top: 40px;
-  color: var(--clr-white);
+  color: #fff;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 0.25rem;
@@ -435,7 +450,7 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: #094f6e;
+  background: #f55800;
   width: 2rem;
   height: 2rem;
   display: -ms-grid;

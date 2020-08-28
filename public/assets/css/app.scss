@@ -10,7 +10,9 @@ $c4: #094f6e;
 $c5: #022534;
 $w: #fff;
 $b: #000;
-
+$o: #f55800;
+$b1: #262626;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 // STYLES
 
 html {
@@ -43,62 +45,81 @@ body {
   background-color: $w;
   max-width: 1440px;
 }
-.menu {
-  display: none;
-}
 
+/* navbar */
 nav {
   background: $w;
   padding: 1rem 1.5rem;
-
-  .fixed-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: $w;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-
-    .links a {
-      color: $c5;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.25rem;
-      transition: all 0.3s linear;
-      font-weight: bold;
-      padding: 0.75rem 0;
-      &:hover {
-        color: $c3;
-      }
-    }
-  }
-
-  .nav-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .nav-toggle {
-      font-size: 1.5rem;
-      color: green;
-      background: transparent;
-      border-color: transparent;
-      // transition: var(--transition);
-      cursor: pointer;
-      &:hover {
-        color: red;
-      }
-    }
-    .logo {
-      width: 3rem;
-    }
-    .links-container {
-      height: 0;
-      overflow: hidden;
-      transition: all 0.3s linear;
-    }
-  }
 }
-
+/* fixed nav */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $w;
+  box-shadow: $light-shadow;
+  z-index: 1000;
+}
+.fixed-nav .links a {
+  color: $c5;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  transition: all 0.3s linear;
+  padding: 0.75rem 0;
+  &:hover {
+    color: $c3;
+  }
+  // color: $b;
+}
+.fixed-nav .links a:hover {
+  color: $o;
+}
+/* .fixed-nav .links-container {
+  height: auto !important;
+} */
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: $o;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: $b;
+}
+.logo {
+  height: 30px;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.show-links {
+  height: 200px;
+}
+.links a {
+  background: $w;
+  color: var(--clr-grey-5);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  display: block;
+  transition: all 0.3s linear;
+  margin: 0 1rem;
+  padding: 0;
+}
+.links a:hover {
+  color: $o;
+}
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
@@ -118,7 +139,7 @@ nav {
     display: none;
   }
   .links-container {
-    height: auto;
+    height: auto !important;
   }
   .links {
     display: flex;
@@ -139,29 +160,129 @@ nav {
     text-decoration: none;
   }
 }
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
+.links a:hover {
+  color: var(--clr-white);
 }
+
+// .menu {
+//   display: none;
+// }
+
+// nav {
+//   background: $w;
+//   padding: 1rem 1.5rem;
+
+//   .fixed-nav {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     background: $w;
+//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+//     .links a {
+//       color: $c5;
+//       font-size: 1rem;
+//       text-transform: uppercase;
+//       letter-spacing: 0.25rem;
+//       transition: all 0.3s linear;
+//       font-weight: bold;
+//       padding: 0.75rem 0;
+//       &:hover {
+//         color: $c3;
+//       }
+//     }
+//   }
+
+//   .nav-header {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     .nav-toggle {
+//       font-size: 1.5rem;
+//       color: green;
+//       background: transparent;
+//       border-color: transparent;
+//       // transition: var(--transition);
+//       cursor: pointer;
+//       &:hover {
+//         color: red;
+//       }
+//     }
+//     .logo {
+//       width: 3rem;
+//     }
+//     .links-container {
+//       height: 0;
+//       overflow: hidden;
+//       transition: all 0.3s linear;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 800px) {
+//   nav {
+//     background: transparent;
+//   }
+//   .nav-center {
+//     width: 90vw;
+//     max-width: 1170px;
+//     margin: 0 auto;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+//   .nav-header {
+//     padding: 0;
+//   }
+//   .nav-toggle {
+//     display: none;
+//   }
+//   .links-container {
+//     height: auto;
+//   }
+//   .links {
+//     display: flex;
+//   }
+//   .links a {
+//   background: transparent;
+//   color: $w;
+//   font-size: 1rem;
+//   text-transform: uppercase;
+//   letter-spacing: 0.25rem;
+//   display: block;
+//   transition: all 0.3s linear;
+//   margin: 0 1rem;
+//   padding: 0;
+// }
+// .links a:hover {
+//   color: $c4;
+//   text-decoration: none;
+// }
+// }
+// @media screen and (min-width: 800px) {
+//   h1 {
+//     font-size: 4rem;
+//   }
+//   h2 {
+//     font-size: 2.5rem;
+//   }
+//   h3 {
+//     font-size: 1.75rem;
+//   }
+//   h4 {
+//     font-size: 1rem;
+//   }
+//   body {
+//     font-size: 1rem;
+//   }
+//   h1,
+//   h2,
+//   h3,
+//   h4 {
+//     line-height: 1;
+//   }
+// }
 @media screen and (max-width: 550px) {
   .banner {
     .container {
@@ -253,7 +374,7 @@ header {
 }
 
 #work {
-  min-width: 90vh;
+  min-height: 90vh;
 }
 .about {
   background-color: $w;
@@ -277,6 +398,7 @@ header {
     padding: auto 30px;
     h2 {
       font-size: 60px;
+      color: $o;
     }
     p {
       line-height: 1.8em;
@@ -307,7 +429,7 @@ header {
       margin-top: 20px;
     }
     h2 {
-      color: $b;
+      color: $o;
       font-size: 60px;
       margin-top: 30%;
     }
@@ -333,11 +455,16 @@ header {
       border-bottom: 1px solid $b;
     }
     input[type="submit"] {
-      background-color: red;
+      background-color: $o;
       border: 0;
       margin-top: 30px;
       padding: 20px;
       color: $w;
+      &:hover {
+        background-color: $w;
+        color: $o;
+        border: 1px solid $o;
+      }
     }
   }
 }
@@ -369,14 +496,14 @@ header {
 
 footer {
   background-image: url(../wavesOpacity.svg);
-  background-color: $c5;
+  background-color: $b1;
   position: relative;
   height: 210px;
   padding: 5em 1rem;
 }
 footer p {
   margin-top: 40px;
-  color: var(--clr-white);
+  color: $w;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 0.25rem;
@@ -396,7 +523,7 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: $c4;
+  background: $o;
   width: 2rem;
   height: 2rem;
   display: grid;

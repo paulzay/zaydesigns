@@ -4,50 +4,352 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zay Designs</title>
+    <link
+      rel="stylesheet"
+      href="./../fontawesome-free-5.12.0-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/app.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   </head>
-  <body>
-    <!-- <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-      </div>
 
-      <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait"></div>
+  <body>
+    <header id="home">
+      <nav id="nav">
+        <div class="nav-center">
+          <div class="nav-header">
+            <img src="../public/assets/zdlogo.svg" alt="logo" class="logo" />
+            <button class="nav-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link"> Home </a>
+              </li>
+              <li>
+                <a href="#work" class="scroll-link"> My Work </a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link"> About Me </a>
+              </li>
+              <li>
+                <a href="#contact" class="scroll-link"> Get In Touch </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link">
-              Home
-            </a>
+      </nav>
+      <div class="banner">
+        <div class="container">
+          <h1>Hi there, I'm Paul Zay</h1>
+          <h2>I am a Full Stack Software Engineer</h2>
+          <p>
+            I am passionate about building excellent software that improves the
+            lives of those around me. I can help you build a product, feature or
+            website. Take a tour around my portolio.
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- <div class="hero">
+      <h1>
+        <a
+          href=""
+          class="typewrite"
+          data-period="2000"
+          data-type='[ "Hello, my name is Paul.", "You can call me Zay", "I am a problem solver.", "Programming is my philosophers stone ." ]'
+        >
+          <span class="wrap"></span>
+        </a>
+      </h1>
+    </div> -->
+    <!-- Smooth scroll to sections -->
+
+    <section id="work" class="section">
+      <div class="title">
+        <h2>My Works</span></h2>
+      </div>
+      <!-- <div class="tiles">
+        <a class="tile" href="#">
+          <img
+            src="https://user-images.githubusercontent.com/29974825/84490413-d0c24880-acab-11ea-8124-9c6a68b66464.png"
+            alt=""
+          />
+          <div class="details">
+            <span class="title">Lorem ipsum</span>
+            <span class="info">
+              Quisque vel felis lectus donec vitae dapibus magna</span
+            >
+          </div>
+        </a>
+        <a class="tile" href="#">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/2.jpg"
+            alt=""
+          />
+          <div class="details">
+            <span class="title">Lorem ipsum</span>
+            <span class="info">
+              Quisque vel felis lectus donec vitae dapibus magna</span
+            >
+          </div>
+        </a>
+        <a class="tile" href="#">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/3.jpg"
+            alt=""
+          />
+          <div class="details">
+            <span class="title">Lorem ipsum</span>
+            <span class="info">
+              Quisque vel felis lectus donec vitae dapibus magna</span
+            >
+          </div>
+        </a>
+        <a class="tile" href="#">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/4.jpg"
+            alt=""
+          />
+          <div class="details">
+            <span class="title">Lorem ipsum</span>
+            <span class="info">
+              Quisque vel felis lectus donec vitae dapibus magna</span
+            >
+          </div>
+        </a>
+      </div> -->
+      <div class="container mt-40" id="work">
+        <h3 class="text-center">Hover Effect Style : Demo - 15</h3>
+        <div class="row mt-30">
+          <div class="col-md-3 col-sm-6">
+            <div class="box15">
+              <img
+                src="http://bestjquery.com/tutorial/hover-effect/demo119/images/img-1.jpg"
+                alt=""
+              />
+              <div class="box-content">
+                <h3 class="title">Williamson</h3>
+                <ul class="icon">
+                  <li>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-link"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="box15">
+              <img
+                src="http://bestjquery.com/tutorial/hover-effect/demo119/images/img-3.jpg"
+                alt=""
+              />
+              <div class="box-content">
+                <h3 class="title">Kristiana</h3>
+                <ul class="icon">
+                  <li>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-link"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="box15">
+              <img
+                src="http://bestjquery.com/tutorial/hover-effect/demo119/images/img-2.jpg"
+                alt=""
+              />
+              <div class="box-content">
+                <h3 class="title">Kristiana</h3>
+                <ul class="icon">
+                  <li>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-link"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="box15">
+              <img
+                src="http://bestjquery.com/tutorial/hover-effect/demo119/images/img-4.jpg"
+                alt=""
+              />
+              <div class="box-content">
+                <h3 class="title">Kristiana</h3>
+                <ul class="icon">
+                  <li>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-link"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <!-- <p>
+          01. Research Understand the client’s subject matter completely and
+          build on the knowledge related to it, becoming intimately familiar
+          with the subject matter. Determine methods to address the specific
+          customer’s needs and requirements. 02. Design Misleadingly thought of
+          as the superficial appearance of a product, design actually
+          encompasses a lot more. It is a cross functional process that includes
+          market research, technical research, design of a concept, and
+          prototype mockup. 03. Develop Findings from the research and design
+          phases are utilized for the production of specific products including
+          materials, systems, and methods. Engineer utilizing the research and
+          designs to produce commercial products for the customer.
+        </p>
+        <p>my tools of choice include ruby, python, and javascript</p> -->
+
+      <div class="about">
+        <div class="texts">
+          <h2>About Me</h2>
+          <div class="left-text">
+            <p>
+              I am software expert with professional experience innovating
+              solutions. I specialize in building applications specific to the
+              business needs of my clients. I do work in software development,
+              front-end/back-end web, database management, graphic design, and
+              cloud computing.
+            </p>
+            <p>
+              When I'm away from my computer, I enjoy playing the guitar,
+              dancing and penning my thoughts on various platforms. And taking a
+              drive on EuroTruck.
+            </p>
+            <h3>Languages and Tools</h3>
+            <div class="logos">
+              <img
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
+              />
+
+              <img
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"
+              />
+              <img
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
+              /><img
+                src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/ruby/ruby.png"
+              />
+              <img
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="./assets/pr.jpg" alt="my photos" />
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <div class="contact">
+        <div class="text">
+          <h2>Get in touch</h2>
+          <p>
+            I'm always interested in hearing about new projects, so if you'd
+            like to chat please get in touch.
+          </p>
+        </div>
+        <form action=”mailto:paulotieno2@gmail.com” method=”POST” enctype=”multipart/form-data” name=”EmailForm” class="contact">
+          <label>Your Name(required)</label>
+          <input type="text" required />
+          <label for="email">Your Email(required)</label>
+          <input type="email" required />
+          <label for="subject">Subject</label>
+          <input type="text" required />
+          <label for="message">Your Message</label>
+          <input type="text" required />
+          <input type="submit" placeholder="SUBMIT" />
+        </form>
+      </div>
+    </section>
+    <!-- <div class="custom-shape-divider-top-1598543374">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25"
+          class="shape-fill"
+        ></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5"
+          class="shape-fill"
+        ></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div> -->
+    <footer class="section">
+      <p>&copy; Paul Ogolla <span class="date"></span>. all rights reserved</p>
+      <div class="socials">
+        <ul>
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/in/paulogolla/"
+              ><i class="fa fa-linkedin"></i
+            ></a>
           </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">
-              About Me
-            </a>
+          <li>
+            <a target="_blank" href="https://twitter.com/_paulzay_"
+              ><i class="fa fa-twitter"></i
+            ></a>
           </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              My Work
-            </a>
+          <li>
+            <a target="_blank" href="https://github.com/paulzay/"
+              ><i class="fa fa-github"></i
+            ></a>
           </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              Get In Touch
-            </a>
+          <li>
+            <a target="_blank" href="https://dev.to/paulzay"
+              ><i class="fa fa-dev"></i
+            ></a>
           </li>
         </ul>
-      </nav>
-    </header> -->
-    <div class="wrapper">
-      <div class="wrapper-image">
-        <!-- <img src="./assets/nathan-de-fortunato-Kfjp8qa8_pM-unsplash.jpg"> -->
       </div>
-
-      <p class="line typing-animation">Hi, my name is Paul Zay.</p>
-    </div>
+    </footer>
+    <a href="#home" class="scroll-link top-link">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
+    <script src="./js/main.js"></script>
+    <script src="https://profile.codersrank.io/widget/widget.js"></script>
   </body>
 </html>

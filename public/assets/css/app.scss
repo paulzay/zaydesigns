@@ -375,6 +375,11 @@ header {
 
 #work {
   min-height: 90vh;
+  padding-top: 40px;
+  h2 {
+    font-size: 60px;
+    color: $o;
+  }
 }
 .about {
   background-color: $w;

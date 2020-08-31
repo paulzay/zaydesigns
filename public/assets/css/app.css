@@ -280,6 +280,12 @@ header {
 
 #work {
   min-height: 90vh;
+  padding-top: 40px;
+}
+
+#work h2 {
+  font-size: 60px;
+  color: #f55800;
 }
 
 .about {

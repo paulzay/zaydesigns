@@ -9,7 +9,7 @@ date.innerHTML = new Date().getFullYear();
 // ********** close links ************
 const navToggleBtn = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
-const links = document.querySelector(".links");
+const links = document.querySelector(".menu");
 
 navToggleBtn.addEventListener("click", () => {
   // linksContainer.classList.toggle("show-links"); // useful in the case of static css data, but what if we want to add/remove links dynamically?

@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zay Designs</title>
-    <meta name="description" content="My personal porfolio website built with html, css and js"> 
+    <meta name=”description” content="Full-Stack Developer and Product Designer, based in Nairobi, Kenya">
+    <meta name=”keywords” content="Paul Zay, developer,Ruby on Rails, RoR,HTML,JavaScript,SQL,React">
+    <meta name="author" content="Paul Zay Ogolla">
     <link rel="icon" type="image/png" href="./assets/favicon-32x32.png"/>
-    <link
-      rel="stylesheet"
-      href="./../fontawesome-free-5.12.0-web/css/all.min.css"
-    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -17,15 +15,10 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./assets/css/app.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   </head>
 
   <body>
@@ -39,7 +32,7 @@
             </button>
           </div>
           <div class="links-container">
-            <ul class="menu" data-animation="diagonal">
+            <ul class="menu" id="js-menu"data-animation="diagonal">
               <li>
                 <a href="#home" class="scroll-link"> Home       
                   <span class="border border-top"></span>
@@ -74,7 +67,7 @@
       </nav>
       <div class="banner">
         <div class="container">
-          <h1>Hi there, I'm Paul Zay</h1>
+          <h1>Hi there, I'm Paul 'Zay' Ogolla</h1>
           <h2>I am a Full Stack Software Engineer</h2>
           <p>
             I am passionate about building excellent software that improves the
@@ -110,7 +103,7 @@
     </header>
     <section id="work" class="section">
       <div class="title">
-        <h2>My Works</span></h2>
+        <h2>My Work</span></h2>
       </div>
       <div class="container">
         <div class="items">
@@ -205,32 +198,33 @@
             <p>
               I am software expert with professional experience innovating
               solutions. I specialize in building applications specific to the
-              business needs of my clients. I do work in software development,
+              business needs of my clients. I work in software development,
               front-end/back-end web, database management, graphic design, and
               cloud computing.
             </p>
             <p>
-              When I'm away from my computer, I enjoy playing the guitar,
-              dancing and penning my thoughts on various platforms. And taking a
-              drive on EuroTruck.
+              When I'm away from my computer, I enjoy playing the guitar, 
+              dancing, penning my thoughts on various platforms, and
+              taking a drive on EuroTruck.
             </p>
             <h3>Languages and Tools</h3>
+            <p>HTML/CSS/SCSS, SQL, JS, Ruby on Rails, React, Python, Ruby</p>
             <div class="logos">
               <img
                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
-              />
+              alt="js image"/>
 
               <img
                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"
-              />
+              alt="python image"/>
               <img
                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
-              /><img
+              alt="react image"/><img
                 src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/ruby/ruby.png"
-              />
+              alt="ruby image"/>
               <img
                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"
-              />
+              alt="node image"/>
             </div>
           </div>
         </div>
@@ -262,6 +256,24 @@
       </div>
     </section>
     <footer class="section">
+      <div class="socials">
+        <ul>
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/in/paulogolla/"><i class="fa fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/_paulzay_"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/paulzay/"><i class="fa fa-github"></i></a>
+          </li>
+          <li>
+            <a href="https://medium.com/@paulotieno2">
+              <i class="fa fa-medium"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
       <p>&copy; Paul Ogolla <span class="date"></span>. all rights reserved</p>
     </footer>
     <a href="#home" class="scroll-link top-link">
@@ -269,6 +281,6 @@
     </a>
     <!-- javascript -->
     <script src="./js/main.js"></script>
-    <script src="https://profile.codersrank.io/widget/widget.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   </body>
 </html>

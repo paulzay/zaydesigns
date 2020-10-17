@@ -71,3 +71,8 @@ for (let link of scrollLinks) {
     linksContainer.style.height = 0;
   });
 }
+const form = document.getElementById('emailform');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  form.reset();
+})

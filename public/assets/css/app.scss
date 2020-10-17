@@ -44,7 +44,7 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   background-color: $w;
-  max-width: 1440px;
+
 }
 
 /* navbar */
@@ -469,8 +469,8 @@ header {
   }
 }
 .about {
-  background-color: $w;
-  color: $b1;
+  background-color: $b;
+  color: $w;
   padding: 40px 6vw;
   margin: 40px 0;
   min-height: 90vh;
@@ -490,10 +490,10 @@ header {
     padding: auto 30px;
     h2 {
       font-size: 60px;
-      color: $b;
+      color: $w;
     }
     p {
-      color: $b1;
+      color: $w;
       line-height: 1.8em;
       font-size: 18px;
       margin-top: 20px;

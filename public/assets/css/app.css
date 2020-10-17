@@ -30,7 +30,6 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   background-color: #fff;
-  max-width: 1440px;
 }
 
 /* navbar */
@@ -518,8 +517,8 @@ header {
 }
 
 .about {
-  background-color: #fff;
-  color: #666666;
+  background-color: #000;
+  color: #fff;
   padding: 40px 6vw;
   margin: 40px 0;
   min-height: 90vh;
@@ -553,11 +552,11 @@ header {
 
 .about .texts h2 {
   font-size: 60px;
-  color: #000;
+  color: #fff;
 }
 
 .about .texts p {
-  color: #666666;
+  color: #fff;
   line-height: 1.8em;
   font-size: 18px;
   margin-top: 20px;

@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulzay/portfolio.git"
+  },
+  "keywords": [
+    "developer"
+  ],
+  "author": "paul ogolla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulzay/portfolio/issues"
+  },
+  "homepage": "https://github.com/paulzay/portfolio#readme",
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}

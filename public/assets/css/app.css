@@ -517,8 +517,8 @@ header {
 }
 
 .about {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 40px 6vw;
   margin: 40px 0;
   min-height: 90vh;
@@ -552,11 +552,11 @@ header {
 
 .about .texts h2 {
   font-size: 60px;
-  color: #fff;
+  color: #000;
 }
 
 .about .texts p {
-  color: #fff;
+  color: #000;
   line-height: 1.8em;
   font-size: 18px;
   margin-top: 20px;
@@ -566,8 +566,13 @@ header {
   color: #022534;
 }
 
+.about .right {
+  width: 60%;
+}
+
 .about .right img {
   border-radius: 50%;
+  width: 100%;
 }
 
 .contact {
@@ -711,7 +716,6 @@ footer p {
   }
 }
 
-/*********************** Demo - 15 *******************/
 .box15 {
   position: relative;
   width: 50%;
@@ -733,7 +737,7 @@ footer p {
 }
 
 .box15:hover .box-content {
-  background-color: rgba(255, 242, 242, 0.8);
+  background-color: rgba(211, 211, 211, 0.8);
 }
 
 .box15 .box-content:after,
